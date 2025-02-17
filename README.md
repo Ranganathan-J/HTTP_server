@@ -8,3 +8,27 @@ Custom Headers: Allows sending custom headers with HTTP responses.
 Basic Routing: Implements routing for specific URLs.
 Requirements
 Python 3.9 or higher
+
+
+
+
+---
+
+### Key Points:
+1. **Code Blocks**: Use triple backticks (```) to wrap your code for better readability.
+2. **Headers**: Use `#` and `##` for headers to organize sections.
+3. **Inline Code**: Use single backticks (e.g., `curl`) for inline code.
+4. **Bullet Points**: Use `-` or `*` for bullet points to list steps or options.
+5. **Bold/Italic Text**: Use `**bold**` and `*italic*` for emphasis.
+
+### GitHub Preview:
+
+If you paste this code into your **README.md** file, GitHub will render it as follows:
+
+- The **code blocks** will be properly formatted with syntax highlighting.
+- **Headings** will be clear and visually separated.
+- **Example outputs** (like the GET/POST responses) will be shown as if they were actual outputs.
+  
+This will help others understand the usage of the project at a glance while making it visually appealing and easy to follow.
+
+
