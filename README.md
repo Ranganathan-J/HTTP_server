@@ -7,27 +7,31 @@ POST Requests: Handles POST requests to receive and process data.
 Custom Headers: Allows sending custom headers with HTTP responses.
 Basic Routing: Implements routing for specific URLs.
 Requirements
-Python 3.9
+Python 3.9 or higher
 Installation
-Clone this repository:
+1. Clone this Repository
+Clone the repository to your local machine:
 
 bash
 Copy
 Edit
 git clone https://github.com/Ranganathan-J/HTTP_server.git
-Navigate into the project directory:
-
+2. Navigate into the Project Directory
 bash
 Copy
 Edit
 cd http-server-python
-Run the server: Simply run the Python file that contains the server code. By default, the server will run on localhost (127.0.0.1) and listen on port 8080.
+3. Run the Server
+Run the Python server script:
 
 bash
 Copy
 Edit
 python server.py
-Access the server: Open your browser and go to:
+By default, the server will run on localhost (127.0.0.1) and listen on port 8080.
+
+4. Access the Server
+Open your web browser and go to:
 
 cpp
 Copy
@@ -40,13 +44,13 @@ bash
 Copy
 Edit
 curl http://127.0.0.1:8080
-If you have a POST handler implemented, you can send data as follows:
+If you have a POST handler implemented, you can send data like this:
 
 bash
 Copy
 Edit
 curl -X POST -d "name=JohnDoe" http://127.0.0.1:8080
-Example
+Example Response
 Here’s an example response for a GET request to the root endpoint (/):
 
 makefile
@@ -57,14 +61,33 @@ Content-Type: text/html; charset=UTF-8
 Content-Length: 17
 
 Hello, World!
-For a POST request, the server might respond with the data it receives, or a success message.
+For a POST request, the server might respond with the data it receives or a success message.
 
 Customizing the Server
-Change Port: You can modify the port number by changing the PORT variable in the server.py file.
-Add Routes: If you want to handle more routes, simply add more conditions in the handle_request function to check for different paths (e.g., /about, /contact).
+Change Port: Modify the port number by changing the PORT variable in the server.py file.
+
+python
+Copy
+Edit
+PORT = 8081
+Add Routes: To handle more routes, simply add more conditions in the handle_request function to check for different paths (e.g., /about, /contact).
+
+python
+Copy
+Edit
+if "GET /about" in request:
+    response = "<html><body><h1>About Us</h1></body></html>"
 Serve Static Files: To serve HTML, CSS, and JS files, you can read the file content and send it as the response.
+
+python
+Copy
+Edit
+def serve_file(filepath):
+    with open(filepath, 'r') as file:
+        return file.read()
 Contributing
 Feel free to fork this repository and submit pull requests! Any contributions to improve the functionality of the server are welcome.
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+
