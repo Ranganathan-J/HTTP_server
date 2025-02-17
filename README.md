@@ -22,7 +22,7 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/Ranganathan-J/HTTP_server.git
 
-
+--
 ### Key Points:
 1. **Code Blocks**: Use triple backticks (```) to wrap your code for better readability.
 2. **Headers**: Use `#` and `##` for headers to organize sections.
